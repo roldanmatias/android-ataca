@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        android:textSize="14sp"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/imgLocal"
+        android:layout_width="250dp"
+        android:layout_height="220dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imgRemoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_below="@+id/imgLocal"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout 
+        android:id="@+id/layoutSonido"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="100dp"
+        android:layout_below="@+id/imgRemoto"
+        android:orientation="horizontal"
+        >
+        
+        <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="reproducirSonido"
+        android:text="Play Sonido" />
+
+    	<Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:onClick="stopSonido"
+        android:text="Stop Sonido" />
+    
+    </LinearLayout>
+    
+
+    <Button
+        android:id="@+id/btnVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layoutSonido"
+        android:onClick="verVideo"
+        android:text="Ver video" />
+
+    <LinearLayout 
+        android:id="@+id/layoutMapa"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="10dp"
+        android:layout_below="@+id/btnVideo"
+        android:orientation="horizontal"
+        >
+    	<Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mapa Externo"
+        android:onClick="verMapaExterno" />
+    
+    	<Button
+        android:id="@+id/buttonmapa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Mapa"
+        android:onClick="verMapa" />
+ 	</LinearLayout>
+ 	
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layoutMapa"
+        android:text="Web" 
+        android:onClick="verWeb"/>
+
+</RelativeLayout>
